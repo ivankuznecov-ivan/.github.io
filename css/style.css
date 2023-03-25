@@ -1898,18 +1898,15 @@ button {
   -webkit-column-count: 3;
      -moz-column-count: 3;
           column-count: 3;
-  min-height: 288px;
+  min-height: 200px;
 }
 
 .bg-list {
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
-  min-height: min-content;
   -webkit-column-count: 1;
      -moz-column-count: 1;
           column-count: 1;
   padding-left: 300px;
-  background: left 12px top 12px url(../image/svg/screen-accordion.svg),
+  background: left 12px top 50% url(../image/svg/screen-accordion.svg),
   left url(../image/svg/frame-accordion.svg);
   background-repeat: no-repeat;
 }
@@ -1930,6 +1927,7 @@ button {
 }
 
 .inner__link {
+  position: relative;
   display: inline-block;
   font-size: 16px;
   line-height: 22px;
@@ -1964,6 +1962,7 @@ button {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
+.inner__link::after,
 .link::after {
   content: "";
   position: absolute;
@@ -1995,6 +1994,7 @@ button {
          transform: scaleX(1);
 }
 
+.inner__link:hover::after,
 .link:hover::after {
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
@@ -3569,15 +3569,11 @@ button {
     -webkit-column-gap: 88px;
        -moz-column-gap: 88px;
             column-gap: 88px;
-    min-height: 0;
-    height: 384px;
+    min-height: 130px;
+
   }
 
   .bg-list {
-    min-height: -webkit-min-content;
-    min-height: -moz-min-content;
-    min-height: min-content;
-    height: 130px;
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
@@ -3835,15 +3831,10 @@ button {
     -webkit-column-gap: 85px;
        -moz-column-gap: 85px;
             column-gap: 85px;
-    min-height: 0;
-    height: 288px;
+    min-height: 190px;
   }
 
   .bg-list {
-    min-height: -webkit-min-content;
-    min-height: -moz-min-content;
-    min-height: min-content;
-    height: 191px;
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
@@ -4360,11 +4351,11 @@ button {
   }
 
   .accordion__inner-list {
-    width: calc( 196 / 290 * 100%);
+    width: 100%;
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
-    min-height: 769px;
+    min-height: 130px;
   }
 
   .catalog__content-wrap {
@@ -4380,13 +4371,11 @@ button {
   }
 
   .bg-list {
-    width: 100%;
-    min-height: 0;
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
     padding-left: 115px;
-    background: left 6px top 6px url(../image/svg/screen-320.svg),
+    background: left 6px top 50% url(../image/svg/screen-320.svg),
     left url(../image/svg/fraime-320.svg);
     background-repeat: no-repeat;
   }

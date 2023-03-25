@@ -209,6 +209,7 @@ validation
       }, animationTime / framesCount);
     });
   });
+
   const btnUp = {
     el: document.querySelector('.btn-up'),
     scrolling: false,
