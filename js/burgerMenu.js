@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
   burger.addEventListener('click', (e) => {
     e.currentTarget.classList.toggle('is-opened');
     menu.classList.toggle('is-opened');
-    body.classList.toggle('scroll__none');
+    body.classList.toggle('scroll-none');
   });
 
   menuLinks.forEach(el => {
     el.addEventListener('click', (e) => {
       burger.classList.remove('is-opened');
       menu.classList.remove('is-opened');
-      body.classList.remove('scroll__none');
+      body.classList.remove('scroll-none');
     });
   });
 

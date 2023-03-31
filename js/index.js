@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   })
 
-  const btns = document.querySelectorAll(".menu__btn");
+  const btns = document.querySelectorAll(".menu-btn");
   const dropdowns = document.querySelectorAll(".dropdown");
   const activeClassdropdowns = "dropdown__active";
   const activeClassbtns = "btn__active";
@@ -177,7 +177,7 @@ validation
   }
 
   (() => {
-    tippy('.js-project__tooltyp', {
+    tippy('.js-project-tooltyp', {
       theme: 'project-tooltyp',
       placement: 'top',
       arrow: true,
@@ -188,27 +188,19 @@ validation
   })();
 
   // scroll
-  const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-  animationTime = 3000,
-  framesCount = 50;
 
-  anchors.forEach(function(item) {
-    item.addEventListener('click', function(e) {
-      e.preventDefault();
-      let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-      let scroller = setInterval(function() {
-      let scrollBy = coordY / framesCount;
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+  for (let smoothLink of smoothLinks) {
+      smoothLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = smoothLink.getAttribute('href');
 
-      if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-          window.scrollBy(0, scrollBy);
-        } else {
-          window.scrollTo(0, coordY);
-          clearInterval(scroller);
-        }
-
-      }, animationTime / framesCount);
-    });
-  });
+          document.querySelector(id).scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+          });
+      });
+  };
 
   const btnUp = {
     el: document.querySelector('.btn-up'),
