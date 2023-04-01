@@ -61,7 +61,6 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-
 }
 
 a {
@@ -283,7 +282,11 @@ button {
           transform-origin: center;
   width: 36px;
   background-color: var(--color-bg);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  -o-transition: transform .4s ease-in-out;
   transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
 }
 
 .is-opened.burger::before {
@@ -291,7 +294,11 @@ button {
   -webkit-transform: translateY(-50%) rotate(45deg);
       -ms-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
+          -webkit-transition: -webkit-transform .4s ease-in-out;
+          transition: -webkit-transform .4s ease-in-out;
+          -o-transition: transform .4s ease-in-out;
           transition: transform .4s ease-in-out;
+          transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
 }
 
 .is-opened.burger::after {
@@ -299,13 +306,21 @@ button {
   -webkit-transform: translateY(-50%) rotate(-45deg);
       -ms-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
+          -webkit-transition: -webkit-transform .4s ease-in-out;
+          transition: -webkit-transform .4s ease-in-out;
+          -o-transition: transform .4s ease-in-out;
           transition: transform .4s ease-in-out;
+          transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
 }
 
 .burger.is-opened .burger-btn__bg {
   opacity: 0;
   background-color: transparent;
+  -webkit-transition-property: opacity, background-color;
+  -o-transition-property: opacity, background-color;
   transition-property: opacity, background-color;
+  -webkit-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
 }
 
@@ -431,11 +446,15 @@ button {
   color: var(--color-bg);
   padding: 0 6px;
   background-color: transparent;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
 .navbar__link-text:focus {
   background-color: var(--color-link-active);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
@@ -467,11 +486,15 @@ button {
   font-size: 18px;
   line-height: 25px;
   color: var(--color-bg);
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
 .navbar-btn:focus {
   background-color: var(--color-link-active);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
@@ -527,7 +550,11 @@ button {
   border: 3px solid var(--color-link);
   opacity: 0;
   z-index: -1;
+  -webkit-transition-property: border-color, z-index, opacity;
+  -o-transition-property: border-color, z-index, opacity;
   transition-property: border-color, z-index, opacity;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -560,6 +587,8 @@ button {
 .close-btn:focus,
 .close-btn:hover {
   outline: 4px solid var(--color-link);
+  -webkit-transition: outline-color .3s ease-in-out;
+  -o-transition: outline-color .3s ease-in-out;
   transition: outline-color .3s ease-in-out;
 }
 
@@ -586,15 +615,6 @@ button {
 }
 
 .searching-enter:-ms-input-placeholder {
-  color: var(--color-searching-bg);
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  background: transparent;
-}
-
-.searching-enter::-ms-input-placeholder {
   color: var(--color-searching-bg);
   font-family: 'Open Sans';
   font-weight: 400;
@@ -633,11 +653,15 @@ button {
 
 .searching-enter:focus {
   border-color: var(--color-link-active);
+  -webkit-transition: border-color .3s ease-in-out;
+  -o-transition: border-color .3s ease-in-out;
   transition: border-color .3s ease-in-out;
 }
 
 .searching-enter:hover {
   border-color: var(--color-input-checked);
+  -webkit-transition: border-color .3s ease-in-out;
+  -o-transition: border-color .3s ease-in-out;
   transition: border-color .3s ease-in-out;
 }
 
@@ -701,16 +725,22 @@ button {
 
 .menu-item:focus-within {
   background-color: var(--color-link-active);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
 .menu-item:hover {
   background-color: transparent;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
 .menu-btn:hover {
   color: var(--color-link);
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
@@ -771,12 +801,14 @@ button {
 .submenu__item:focus-within .submenu__link,
 .submenu__item:hover .submenu__link {
  border-color: var(--color-link);
+ -webkit-transition: border-color .3s ease-in-out;
+ -o-transition: border-color .3s ease-in-out;
  transition: border-color .3s ease-in-out;
 }
 
 .submenu__item:active .submenu__link {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4)));
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4)));
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
@@ -1130,6 +1162,8 @@ button {
 
 .choices.is-focused .choices__inner {
   background-color: var(--color-choices-hover);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
@@ -1139,6 +1173,8 @@ button {
 
 .choices__inner:hover {
   background-color: var(--color-choices-hover);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
@@ -1163,6 +1199,8 @@ button {
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
   background-color: var(--color-choices-hover);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
@@ -1230,12 +1268,16 @@ button {
   border: 1px solid var(--color-bg);
   background: transparent;
   margin-top: 10px;
+  -webkit-transition: border-color .3s ease-in-out;
+  -o-transition: border-color .3s ease-in-out;
   transition: border-color .3s ease-in-out;
 }
 
 .age-frame__text {
   padding-left: 25px;
   color: var(--color-bg);
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
@@ -1426,8 +1468,8 @@ button {
 
 .gallery-slide:active::before {
   border-color: transparent;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4)));
   background: -o-linear-gradient(bottom, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(194, 131, 243, 0.4)), to(rgba(194, 131, 243, 0.4)));
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
@@ -1585,6 +1627,8 @@ button {
 .modal__cross:hover::before,
 .modal__cross:hover::after {
   background-color: var(--color-link);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
@@ -1962,6 +2006,8 @@ button {
   border-bottom: 2px solid var(--color-link);
   z-index: -1;
   opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
@@ -2108,7 +2154,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-          justify-content: flex-start;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -2142,16 +2190,24 @@ button {
 }
 
 .card-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-grow: 1;
-  align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .card-link-text {
   position: relative;
   display: block;
   color: var(--color-link);
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
@@ -2166,6 +2222,8 @@ button {
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
           transform: scaleX(0);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
@@ -2176,6 +2234,8 @@ button {
   bottom: 1px;
   left: 0;
   border-bottom: 1px solid var(--color-link);
+  -webkit-transition: border-color .3s ease-in-out;
+  -o-transition: border-color .3s ease-in-out;
   transition: border-color .3s ease-in-out;
 }
 
@@ -2229,7 +2289,11 @@ button {
   border: 1px solid var(--color--gallery-disable);
   background-color: var(--color--gallery-disable);
   z-index: 10;
+  -webkit-transition-property: border-color, background-color, z-index;
+  -o-transition-property: border-color, background-color, z-index;
   transition-property: border-color, background-color, z-index;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -2423,7 +2487,11 @@ button {
   letter-spacing: 1px;
   color: var(--color-link);
   border-bottom: 1px solid transparent;
+  -webkit-transition-property: color, background-color, border-color;
+  -o-transition-property: color, background-color, border-color;
   transition-property: color, background-color, border-color;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -2469,13 +2537,19 @@ button {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid var(--color--arraw-disable);
+   -webkit-transition: border-color .3s ease-in-out;
+   -o-transition: border-color .3s ease-in-out;
    transition: border-color .3s ease-in-out;
 }
 
 .img-item {
   -webkit-filter: grayscale(90%);
           filter: grayscale(90%);
+  -webkit-transition: -webkit-filter .3s ease-in-out;
+  transition: -webkit-filter .3s ease-in-out;
+  -o-transition: filter .3s ease-in-out;
   transition: filter .3s ease-in-out;
+  transition: filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
 }
 
 .slide-visible:focus .projects__img {
@@ -2501,7 +2575,11 @@ button {
   border-radius: 50%;
   background-color: var(--color--gallery-disable);
   border: 1px solid var(--color--gallery-disable);
+  -webkit-transition-property: background-color, border-color;
+  -o-transition-property: background-color, border-color;
   transition-property: background-color, border-color;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -2637,6 +2715,8 @@ button {
 .form-style:focus,
 .form-style:hover {
   background-color: var(--color--gallery-disable);
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
 }
 
@@ -2893,13 +2973,13 @@ button {
 .btn-up {
   position: fixed;
   background-color: var(--color-header-hover);
-  right: 5px;
-  bottom: 30px;
+  right: 1%;
+  bottom: 3%;
   border-radius: 25px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2920,15 +3000,10 @@ button {
   z-index: 1000;
 }
 
-.btn-up_hide {
-  display: none;
-}
-
 .btn-up_hiding {
-  opacity: 0;
-  -webkit-transform: translateY(100px);
-      -ms-transform: translateY(100px);
-          transform: translateY(100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .btn-up::before {
@@ -3138,12 +3213,20 @@ button {
     height: 100vh;
     padding: 97px 48px 0 48px;
     background-color: var(--color-menu-active);
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
   }
 
   .menu-wrap.is-opened {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
   }
 
   .navbar__link-text {
@@ -3406,6 +3489,8 @@ button {
     height: 10px;
     background: var(--color-event-section);
     opacity: 1;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
 
@@ -4619,6 +4704,5 @@ button {
   }
 
 }
-
 
 
