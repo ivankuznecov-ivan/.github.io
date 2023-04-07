@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   let gallerySlider = new Swiper(".gallery-swiper .slides-container", {
+
     slidesPerView: 1,
     grid: {
       rows: 1,
@@ -34,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
       type: "fraction"
     },
     navigation: {
-      nextEl: ".nav-prev",
-      prevEl: ".nav-next",
+      nextEl: ".nav-next",
+      prevEl: ".nav-prev"
     },
     breakpoints: {
       320: {
@@ -57,9 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
     a11y: false,
     keyboard: {
       enabled: true,
-      onlyInViewport: true
-    }, // можно управлять с клавиатуры стрелками влево/вправо
-    // Дальнейшие надстройки делают слайды вне области видимости не фокусируемыми
+      onlyInViewport: false,
+    },
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     slideVisibleClass: "slide-visible",
@@ -158,9 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
     a11y: false,
     keyboard: {
       enabled: true,
-      onlyInViewport: true
-    }, // можно управлять с клавиатуры стрелками влево/вправо
-    // Дальнейшие надстройки делают слайды вне области видимости не фокусируемыми
+      onlyInViewport: false,
+    },
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     slideVisibleClass: "slide-visible",
@@ -214,8 +213,8 @@ document.addEventListener('DOMContentLoaded', function() {
     a11y: false,
     keyboard: {
       enabled: true,
-      onlyInViewport: true
-    }, // можно управлять с клавиатуры стрелками влево/вправо
+      onlyInViewport: false,
+    },
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     slideVisibleClass: "slide-visible",
