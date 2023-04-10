@@ -1394,18 +1394,18 @@ button {
   border-color: var(--color--arraw-disable);
 }
 
-.nav-next {
+.nav-prev {
   margin-left: 2px;
   margin-right: 20px;
 }
 
-.nav-prev::before {
+.nav-next::before {
   left: calc(50% - 7.07px / 2);
   border-top: 1px solid var(--color-bg);
   border-right: 1px solid var(--color-bg);
 }
 
-.nav-next::before {
+.nav-prev::before {
   left: calc(50% - 7.07px / 2);
   border-left: 1px solid var(--color-bg);
   border-bottom: 1px solid var(--color-bg);
@@ -3865,7 +3865,7 @@ button {
     margin-right: 18px;
   }
 
-  .nav-next {
+  .nav-prev {
     margin-left: 0;
   }
 
@@ -4338,7 +4338,7 @@ button {
     padding-top: calc(100% + 71px);
   }
 
-  .nav-next {
+  .nav-prev {
     margin-right: 18px;
   }
 

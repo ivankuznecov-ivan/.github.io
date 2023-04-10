@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     spaceBetween: 10,
     navigation: {
-      prevEl: ".event__btn--next",
-      nextEl: ".event__btn--prev",
+      prevEl: ".event__btn--prev",
+      nextEl: ".event__btn--next",
     },
     pagination: {
       el: '.swiper-pagination',
@@ -193,8 +193,8 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     spaceBetween: 10,
     navigation: {
-      nextEl: ".project-btn-prev",
-      prevEl: ".project-btn-next"
+      nextEl: ".project-btn-next",
+      prevEl: ".project-btn-prev"
     },
     breakpoints: {
       768: {
